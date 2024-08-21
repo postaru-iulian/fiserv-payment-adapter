@@ -1,7 +1,7 @@
 server:
   port: 8091
   servlet:
-    context-path: /fma
+    context-path: /fpa
   error:
     include-message: ALWAYS
 

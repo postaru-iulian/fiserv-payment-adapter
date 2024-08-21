@@ -1,0 +1,26 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /fma
+  error:
+    include-message: ALWAYS
+
+spring:
+  application:
+    name: fiserv-payment-adapter
+  output:
+    ansi:
+      enabled: ALWAYS
+  jackson:
+    default-property-inclusion: NON_NULL
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    tryItOutEnabled: true
+
+logging:
+  level:
+    root: INFO
+    org:
+      dipocket: DEBUG

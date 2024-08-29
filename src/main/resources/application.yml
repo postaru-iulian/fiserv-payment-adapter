@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8093
   servlet:
     context-path: /fpa
   error:
@@ -13,6 +13,21 @@ spring:
       enabled: ALWAYS
   jackson:
     default-property-inclusion: NON_NULL
+    deserialization:
+      read-date-timestamps-as-nanoseconds: false
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: false
+      client:
+        config:
+          card-tokenization-service:
+            url: https://token-sandbox.dev.clover.com
+            loggerLevel: FULL
+          ecommerce-service:
+            url: https://scl-sandbox.dev.clover.com
+            loggerLevel: FULL
+
 
 springdoc:
   swagger-ui:
@@ -24,3 +39,5 @@ logging:
     root: INFO
     org:
       dipocket: DEBUG
+    io.synapto.payment.adapter.fiserv.client: DEBUG
+

@@ -27,6 +27,9 @@ spring:
           ecommerce-service:
             url: https://scl-sandbox.dev.clover.com
             loggerLevel: FULL
+          fiserv-ecommerce-service:
+            url: https://prod.emea.api.fiservapps.com/sandbox
+            loggerLevel: FULL
 
 
 springdoc:
@@ -40,4 +43,9 @@ logging:
     org:
       dipocket: DEBUG
     io.synapto.payment.adapter.fiserv.client: DEBUG
+
+application:
+  credentials:
+    api-key: dHpaZ7FDrwZaAAsZDYiI68zf3w0Xe0bg
+    secret-key: jzAgcKLvkeoQRdU2KQGtgWf3hQ10LDR8ejpeOJsoKTA
 
